@@ -1,16 +1,21 @@
 // App.tsx
 import React from "react";
-import { Gallery } from "./components/Gallery";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/home/Home";
 import Header from "./components/Header";
 
 export default function App() {
   return (
-    <div className="bg-black text-black min-h-screen flex flex-col">
+    <Router>
       <Header />
-      <main className="bg-white text-black px-8 py-10">
-        <h1 className="text-4xl font-bold text-center mb-10">RECENT WORK</h1>
-        <Gallery />
-      </main>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/journal" element={<Journal />} />
+        <Route path="/collections" element={<Collections />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/gear" element={<Gear />} />
+        <Route path="/about" element={<About />} /> */}
+      </Routes>
+    </Router>
   );
 }
