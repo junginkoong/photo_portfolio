@@ -5,11 +5,11 @@ export default function BackgroundLines() {
             <svg
                 className="absolute left-0 top-0 z-0"
                 width="1"
-                height={3250}
+                height="100%"
                 style={{
                 pointerEvents: "none",
                 position: "absolute",
-                height: "3250px",
+                height: "100%",
                 width: "100%",
                 }}
             >
@@ -47,34 +47,34 @@ export default function BackgroundLines() {
                     x1="50%"
                     y1="30%"
                     x2="50%"
-                    y2="31.25%" // Adjust for your page length
+                    y2="30.5%" // Adjust for your page length
                     stroke="#d1d5db"
                     strokeWidth="1"
                     strokeLinecap="round"
                 />
                 <line
                     x1="50%"
-                    y1="69%"
+                    y1="72.5%"
                     x2="50%"
-                    y2="70.1%" // Adjust for your page length
+                    y2="73.4%" // Adjust for your page length
                     stroke="#d1d5db"
                     strokeWidth="1"
                     strokeLinecap="round"
                 />
                 <line
                     x1="50%"
-                    y1="70.1%"
+                    y1="73.4%"
                     x2="45%"
-                    y2="71%" // Adjust for your page length
+                    y2="75%" // Adjust for your page length
                     stroke="#d1d5db"
                     strokeWidth="1"
                     strokeLinecap="round"
                 />
                 <line
                     x1="45%"
-                    y1="71%"
+                    y1="75%"
                     x2="45%"
-                    y2="95.8%" // Adjust for your page length
+                    y2="100%" // Adjust for your page length
                     stroke="#d1d5db"
                     strokeWidth="1"
                     strokeLinecap="round"

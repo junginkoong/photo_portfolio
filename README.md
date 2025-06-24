@@ -10,8 +10,7 @@ About - explaination about myself, my passion and what I want to achieve
 Other Works - TBD (under construction)
 
 # TODO
-Fade in/out when scrollling in main page
+Create footer
+A Arrow on bottom right, scroll to the top button
 when user clicks on photo, should should full photo with information
-underline bar on the current page we are on
 (maybe) nav should be static on the top of the webpage
-Define Routers
