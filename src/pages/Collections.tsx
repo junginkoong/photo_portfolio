@@ -1,1 +1,0 @@
-// have country/city title and have image below

@@ -24,14 +24,14 @@ export default function Bio() {
                     Capturing candid moments, natural beauty, and striking design through a storytelling lens.
                     </h3>
                     <div className="flex flex-wrap justify-center gap-4 mb-24">
-                    <Link to="/galleries#japan" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
+                    <Link to="/collections#japan" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
                         Japan
                     </Link>
-                    <Link to="/galleries#italy" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
-                        Italy
+                    <Link to="/collections#vienna" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
+                        Vienna
                     </Link>
-                    <Link to="/galleries#germany" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
-                        Germany
+                    <Link to="/collections#munich" className="px-6 py-2 rounded-full bg-transparent border border-gray-200 text-gray-300 font-semibold transition hover:bg-gray-500 hover:text-white">
+                        Munich
                     </Link>
                     {/* Add more countries as needed */}
                     </div>
