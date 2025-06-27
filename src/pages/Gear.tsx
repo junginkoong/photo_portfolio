@@ -1,4 +1,3 @@
-import React from "react";
 import cameraImg from "../assets/gears/camera2.jpg";
 import lensImg from "../assets/gears/lens.png";
 import phoneImg from "../assets/gears/phone.png";
