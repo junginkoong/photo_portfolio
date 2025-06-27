@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { useRef } from "react";
 import Rowgallery from "./Rowgallery";
 import Photos from "../../components/Photos";
 

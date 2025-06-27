@@ -103,7 +103,7 @@ export default function Collections() {
               onClick={() => scrollToSection(idx)}
             >
               <div
-                className={`w-7 h-7 rounded-full border-4 flex items-center justify-center transition-all duration-300
+                className={`w-5 h-5 rounded-full border-4 flex items-center justify-center transition-all duration-300
                   ${activeIdx === idx ? "border-gray-300 bg-gray-300 shadow-lg scale-110" : "border-gray-500 bg-gray-800"}
                 `}
               />
@@ -133,18 +133,20 @@ export default function Collections() {
             className="mb-24 w-full flex flex-col items-center scroll-mt-32"
           >
             {/* Title and cover image row */}
-            <div className="w-full max-w-screen-xl flex flex-row items-center justify-center mb-32 gap-12 px-4">
-              <div className="flex-1 flex flex-col items-center">
+            <div className="w-full max-w-screen-xl flex flex-row items-center justify-center mb-40 gap-12 px-4">
+              <div className="flex-1 flex flex-col items-center justify-center">
                 <h2 className="text-6xl font-bold text-white text-center">{col.country}</h2>
                 <p className="text-lg text-gray-300 mt-4 text-center max-w-2xl">
                   {col.description || "A special journey through " + col.country + "."}
                 </p>
               </div>
-              <ScrollImage
-                src={col.cover.src}
-                alt={col.cover.alt}
-                className="w-[36rem] h-[22rem] object-cover rounded-2xl shadow-2xl border-2 border-gray-800 flex-shrink-0"
-              />
+              <div className="flex-1 flex items-center justify-center" >
+                <ScrollImage
+                  src={col.cover.src}
+                  alt={col.cover.alt}
+                  className="w-full object-cover rounded-2xl shadow-2xl border-2 border-gray-800"
+                />
+              </div>
             </div>
             {/* Masonry grid */}
             <div className="w-full flex justify-center">

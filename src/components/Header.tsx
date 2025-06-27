@@ -13,7 +13,7 @@ const navItems = [
 
 const Header = () => {
   return (
-    <header className="bg-black border-b border-gray-300 flex justify-between items-center text-white" style={{ height: '100px' }}>
+    <header className="bg-black border-b border-gray-300 flex justify-between items-center text-white z-20 relative" style={{ height: '100px' }}>
       {/* Logo Box */}
       <img src={logo} alt="Logo" className="h-full w-auto object-contain"/>
       {/* Nav */}

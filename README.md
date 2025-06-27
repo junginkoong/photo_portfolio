@@ -3,8 +3,6 @@ My web application to post my work on photography.
 
 
 # Summary
-Home - have destination labeled (country travelled) and corresponding images that fades in and out
-Portfolio - displays photos 
 Gear - my Gears explaination (maybe 360 rotation view?)
 About - explaination about myself, my passion and what I want to achieve
 Other Works - TBD (under construction)
