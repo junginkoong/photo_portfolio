@@ -11,7 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/photo_portfolio">
       <ScrollToTop />
       <Header />
       <Routes>
