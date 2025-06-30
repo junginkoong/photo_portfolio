@@ -18,46 +18,53 @@ export default function ContactMe() {
                 </div>
             </div>
             {/* Right Side */}
-            <form className="flex flex-col gap-6">
+            <form
+                className="flex flex-col gap-6"
+                action="https://formspree.io/f/xanjvdwr"
+                method="POST"
+                >
                 <div>
-                <label className="block text-gray-300 mb-1 text-sm" htmlFor="name">
+                    <label className="block text-gray-300 mb-1 text-sm" htmlFor="name">
                     Your name*
-                </label>
-                <input
+                    </label>
+                    <input
                     id="name"
+                    name="name"
                     type="text"
                     required
                     className="w-full bg-transparent border-b border-gray-400 text-white py-1 px-0 focus:outline-none focus:border-white transition"
-                />
+                    />
                 </div>
                 <div>
-                <label className="block text-gray-300 mb-1 text-sm" htmlFor="email">
+                    <label className="block text-gray-300 mb-1 text-sm" htmlFor="email">
                     Your email*
-                </label>
-                <input
+                    </label>
+                    <input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     className="w-full bg-transparent border-b border-gray-400 text-white py-1 px-0 focus:outline-none focus:border-white transition"
-                />
+                    />
                 </div>
                 <div>
-                <label className="block text-gray-300 mb-1 text-sm" htmlFor="message">
+                    <label className="block text-gray-300 mb-1 text-sm" htmlFor="message">
                     Your message
-                </label>
-                <textarea
+                    </label>
+                    <textarea
                     id="message"
+                    name="message"
                     rows={3}
                     className="w-full bg-transparent border-b border-gray-400 text-white py-1 px-0 focus:outline-none focus:border-white transition resize-none"
-                />
+                    />
                 </div>
                 <button
-                type="submit"
-                className="mt-3 bg-gray-400 text-white font-bold py-3 rounded transition hover:bg-gray-500 uppercase tracking-wider"
+                    type="submit"
+                    className="mt-3 bg-gray-400 text-white font-bold py-3 rounded transition hover:bg-gray-500 uppercase tracking-wider"
                 >
-                SEND MESSAGE
+                    SEND MESSAGE
                 </button>
-            </form>
+                </form>
         </div>
       </div>
     )

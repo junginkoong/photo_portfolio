@@ -19,7 +19,19 @@ const collections = [
     photos: Photos.getVienna(),
     description: "A captivating journey through Vienna, showcasing its rich history and stunning architecture.",
   },
-  // Add more countries/cities as needed
+  {
+    country: "Switzerland - Zurich",
+    cover: Photos.getZurichCover(),
+    photos: Photos.getZurich(),
+    description: "A picturesque city known for its pristine lake, vibrant cultural scene, and charming blend of historic and modern architecture.",
+  },
+  {
+    country: "Hong Kong",
+    cover: Photos.getHongKongCover(),
+    photos: Photos.getHongKong(),
+    description: "A dynamic cityscape where East meets West, filled with vibrant streets, neon lights, and unique urban stories.",
+  },
+  
 ];
 
 const breakpointColumnsObj = {

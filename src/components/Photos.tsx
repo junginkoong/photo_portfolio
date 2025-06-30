@@ -19,7 +19,25 @@ import vienna5 from "../assets/vienna/vienna5.jpg";
 import vienna6 from "../assets/vienna/vienna6.jpg";
 import vienna7 from "../assets/vienna/vienna7.jpg";
 import vienna8 from "../assets/vienna/vienna8.jpg";
-// ...import more as needed
+import zurichtitle from "../assets/zurich/zurich_title.jpg";
+import zurich1 from "../assets/zurich/zurich1.jpg";
+import zurich2 from "../assets/zurich/zurich2.jpg";
+import zurich3 from "../assets/zurich/zurich3.jpg";
+import zurich4 from "../assets/zurich/zurich4.jpg";
+import zurich5 from "../assets/zurich/zurich5.jpg";
+import zurich6 from "../assets/zurich/zurich6.jpg";
+import hongkong1 from "../assets/hongkong/hk1.jpg";
+import hongkong2 from "../assets/hongkong/hk2.jpg";
+import hongkong3 from "../assets/hongkong/hk3.jpg";
+import hongkong4 from "../assets/hongkong/hk4.jpg";
+import hongkong5 from "../assets/hongkong/hk5.jpg";
+import hongkong6 from "../assets/hongkong/hk6.jpg";
+import hongkong7 from "../assets/hongkong/hk7.jpg";
+import hongkong8 from "../assets/hongkong/hk8.jpg";
+import hongkong9 from "../assets/hongkong/hk9.jpg";
+import hongkong10 from "../assets/hongkong/hk10.jpg";
+import hongkong11 from "../assets/hongkong/hk11.jpg";
+import hongkongtitle from "../assets/hongkong/hk_title.jpg";
 
 type Photo = { src: string; alt: string };
 
@@ -47,6 +65,29 @@ const viennaPhotos: Photo[] = [
   { src: vienna7, alt: "Vienna 7" },
 ];
 
+const zurichPhotos: Photo[] = [
+  { src: zurich1, alt: "" },
+  { src: zurich2, alt: "" },
+  { src: zurich3, alt: "" },
+  { src: zurich4, alt: "" },
+  { src: zurich5, alt: "" },
+  { src: zurich6, alt: "" },
+];
+
+const hongkongPhotos: Photo[] = [
+  { src: hongkong1, alt: "" },
+  { src: hongkong2, alt: "" },
+  { src: hongkong3, alt: "" },
+  { src: hongkong4, alt: "" },
+  { src: hongkong5, alt: "" },
+  { src: hongkong6, alt: "" },
+  { src: hongkong7, alt: "" },
+  { src: hongkong8, alt: "" },
+  { src: hongkong9, alt: "" },
+  { src: hongkong10, alt: "" },
+  { src: hongkong11, alt: "" },
+];
+
 const galleryMunich: Photo[] = [
     { src: munich4, alt: "Munich 4" },
     { src: munich3, alt: "Munich 3" },
@@ -65,6 +106,15 @@ const galleryVienna: Photo[] = [
     { src: vienna7, alt: "Vienna 7" },
 ]
 
+const galleryHongKong: Photo[] = [
+    { src: hongkong1, alt: "Vienna 2" },
+    { src: hongkong3, alt: "Vienna 3" },
+    { src: hongkong5, alt: "Vienna 4" },
+    { src: hongkong7, alt: "Vienna 5" },
+    { src: hongkong8, alt: "Vienna 6" },
+    { src: hongkong9, alt: "Vienna 7" },
+]
+
 const recentWork: Photo[] = [
     { src: munich4, alt: "Munich 4" },
     { src: munich2, alt: "Munich 2" },
@@ -81,12 +131,20 @@ const Photos = {
     getRecentWork: (): Photo[] => recentWork,
 
     getMunich: (): Photo[] => munichPhotos,
-    getMunichCover: (): Photo => ({ src: munich12, alt: "Mujnich Cover" }),
+    getMunichCover: (): Photo => ({ src: munich12, alt: "Munich Cover" }),
     getMunichGallery: (): Photo[] => galleryMunich,
 
     getVienna: (): Photo[] => viennaPhotos,
     getViennaCover: (): Photo => ({ src: vienna8, alt: "Vienna Cover" }),
     getViennaGallery: (): Photo[] => galleryVienna,
+
+    getHongKong: (): Photo[] => hongkongPhotos,
+    getHongKongCover: (): Photo => ({ src: hongkongtitle, alt: "Hong Kong Cover" }),
+    getHongKongGallery: (): Photo[] => galleryHongKong,
+
+    getZurich: (): Photo[] => zurichPhotos,
+    getZurichCover: (): Photo => ({ src: zurichtitle, alt: "Zurich Cover" }),
+    getZurichGallery: (): Photo[] => zurichPhotos,
 };
 
 export default Photos;

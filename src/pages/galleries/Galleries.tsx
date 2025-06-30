@@ -8,7 +8,7 @@ export default function Galleries() {
       <Rowgallery
         photos={Photos.getMunichGallery()}
         title="Germany - Munich"
-        description="Explore the vibrant streets, tranquil temples, and stunning landscapes of Munich."
+        description="A vibrant collection of street photography from Munich, capturing the essence of the city."
         buttonUrl="/collections#munich"
         reverse={false}
       />
@@ -16,10 +16,27 @@ export default function Galleries() {
       <Rowgallery
         photos={Photos.getViennaGallery()}
         title="Austria - Vienna"
-        description="Explore the vibrant streets, tranquil temples, and stunning landscapes of Japan."
+        description="A captivating journey through Vienna, showcasing its rich history and stunning architecture."
         buttonUrl="/collections#vienna"
         reverse={true}
       />
+      <Rowgallery
+        photos={Photos.getZurichGallery()}
+        title="Switzerland - Zurich"
+        description="A picturesque city known for its pristine lake, vibrant cultural scene, and charming blend of historic and modern architecture."
+        buttonUrl="/collections#zurich"
+        reverse={false}
+      />
+
+      <Rowgallery
+        photos={Photos.getHongKongGallery()}
+        title="Hong Kong"
+        description="A dynamic cityscape where East meets West, filled with vibrant streets, neon lights, and unique urban stories."
+        buttonUrl="/collections#hong"
+        reverse={true}
+      />
+
+      
     </div>
   );
 }
