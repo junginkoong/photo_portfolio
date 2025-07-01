@@ -1,5 +1,6 @@
 import Rowgallery from "./Rowgallery";
 import Photos from "../../components/Photos";
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 
 export default function Galleries() {
   return (
@@ -36,7 +37,7 @@ export default function Galleries() {
         reverse={true}
       />
 
-      
+      <ScrollToTopButton/>
     </div>
   );
 }

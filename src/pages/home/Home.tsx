@@ -3,6 +3,7 @@ import BackgroundLines from './BackgroundLines';
 import Bio from './Bio';
 import ContactMe from './ContactMe';
 import RecentWork from './RecentWork';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       <Bio />
       <RecentWork />
       <ContactMe />
+      <ScrollToTopButton />
     </div>
   );
 };

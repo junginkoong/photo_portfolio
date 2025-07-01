@@ -4,6 +4,8 @@ import Masonry from "react-masonry-css";
 import ScrollImage from "../../components/ScrollImage";
 import Photos from "../../components/Photos";
 import SideBar from "./SideBar";
+import ScrollToTopButton from "../../components/ScrollToTopButton";
+import PhotoModal from "../../components/PhotoModal";
 
 // Example data structure
 const collections = [
@@ -45,6 +47,27 @@ export default function Collections() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [progress, setProgress] = useState(0); // 0 to 1
   const location = useLocation();
+
+  const [modal, setModal] = useState<{ colIdx: number; photoIdx: number } | null>(null);
+  const openModal = (colIdx: number, photoIdx: number) => setModal({ colIdx, photoIdx });
+  const closeModal = () => setModal(null);
+
+  const showPrev = () => {
+    if (!modal) return;
+    const photos = collections[modal.colIdx].photos;
+    setModal({
+      colIdx: modal.colIdx,
+      photoIdx: (modal.photoIdx - 1 + photos.length) % photos.length,
+    });
+  };
+  const showNext = () => {
+    if (!modal) return;
+    const photos = collections[modal.colIdx].photos;
+    setModal({
+      colIdx: modal.colIdx,
+      photoIdx: (modal.photoIdx + 1) % photos.length,
+    });
+  };
 
   // Scroll progress logic
   useEffect(() => {
@@ -138,18 +161,38 @@ export default function Collections() {
                 columnClassName="my-masonry-grid_column"
               >
                 {col.photos.map((photo, pidx) => (
-                  <ScrollImage
+                  <div
                     key={pidx}
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full mb-6 object-cover rounded-lg shadow-lg border border-gray-800"
-                  />
+                    className="cursor-pointer"
+                    onClick={() => openModal(idx, pidx)}
+                    tabIndex={0}
+                    role="button"
+                    onKeyDown={e => {
+                      if (e.key === "Enter" || e.key === " ") openModal(idx, pidx);
+                    }}
+                  >
+                    <ScrollImage
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full mb-6 object-cover rounded-lg shadow-lg border border-gray-800"
+                    />
+                  </div>
                 ))}
               </Masonry>
             </div>
           </div>
         ))}
       </div>
+      <ScrollToTopButton/>
+      {modal && (
+        <PhotoModal
+          photos={collections[modal.colIdx].photos}
+          currentIdx={modal.photoIdx}
+          onClose={closeModal}
+          onPrev={showPrev}
+          onNext={showNext}
+        />
+      )}
     </div>
   );
 }
